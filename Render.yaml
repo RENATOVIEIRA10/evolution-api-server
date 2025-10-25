@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: evolution-api
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    plan: free
+    autoDeploy: true
+    envVars:
+      - key: AUTHENTICATION_API_KEY
+        value: minha_chave_super_secreta_12345
+      - key: SERVER_URL
+        sync: false
+      - key: WEBHOOK_GLOBAL_ENABLED
+        value: "true"
+      - key: WEBHOOK_GLOBAL_WEBHOOK_BY_EVENTS
+        value: "true"
+      - key: LOG_LEVEL
+        value: ERROR
+      - key: LOG_COLOR
+        value: "true"
+      - key: PORT
+        value: "8080"
