@@ -20,3 +20,9 @@ services:
         value: "true"
       - key: PORT
         value: "8080"
+      - key: DATABASE_ENABLED
+        value: "false"
+      - key: DATABASE_PROVIDER
+        value: ""
+      - key: DATABASE_CONNECTION_URI
+        value: ""
